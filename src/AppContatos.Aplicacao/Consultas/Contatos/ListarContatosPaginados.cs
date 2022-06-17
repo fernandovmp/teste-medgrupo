@@ -1,4 +1,4 @@
-﻿using AppContatos.Aplicacao.Entidades;
+using AppContatos.Aplicacao.Entidades;
 using AppContatos.Aplicacao.Enums;
 
 namespace AppContatos.Aplicacao.Consultas.Contatos
@@ -7,8 +7,8 @@ namespace AppContatos.Aplicacao.Consultas.Contatos
     {
         public ListarContatosPaginados(int pagina, int tamanho)
         {
-            Pagina = Math.Min(pagina, 1);
-            Tamanho = Math.Min(tamanho, 1);
+            Pagina = Math.Max(pagina, 1);
+            Tamanho = Math.Max(tamanho, 1);
         }
 
         public int Pagina { get; }
